@@ -8,10 +8,7 @@ import { User } from "../model/users.js";
 import { Subscribe } from "../model/subscribe.js";
 import { TransacrionSubscriptions } from "../model/transaction-subscriptions.js";
 import authenticate from "../middlewere/auth.js";
-const Environment =
-  process.env.NODE_ENV === "production"
-    ? paypal.core.LiveEnvironment
-    : paypal.core.SandboxEnvironment;
+const Environment = paypal.core.SandboxEnvironment;
 const paypalClient = new paypal.core.PayPalHttpClient(
   new Environment(
     process.env.PAYPAL_CLIENT_ID,
