@@ -18,6 +18,7 @@ const paypalClient = new paypal.core.PayPalHttpClient(
   )
 );
 
+console.log(paypalClient) 
 
 router.post("/", authenticate, async (req, res) => {
   // console.log(req.body)
